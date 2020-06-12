@@ -1,0 +1,10 @@
+package emp.model.vo;
+
+public class Employee {
+	
+	public void printEmployee() {
+		//메소드(기능)
+		System.out.println("한수경,27,19941222");
+	}
+
+}

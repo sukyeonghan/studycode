@@ -1,0 +1,10 @@
+package emp.model.vo;
+
+public class Employee {
+	
+	public void printEmployee() {
+		
+		System.out.println("ÇÑ¼ö°æ,27,19941222");
+	}
+
+}
