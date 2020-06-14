@@ -17,7 +17,7 @@ public class VariablePractice1 {
 	System.out.print("키를 입력하세요 : ");
 	double height=sc.nextDouble();
 	System.out.printf("키 %.1fcm인 %d살 %c자 %s님 반갑습니다^^",height,age,gender,name);
-
-}
 	
+	
+	}
 }
