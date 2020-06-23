@@ -1,0 +1,74 @@
+package com.oop.model.vo;
+
+public class Member {
+	
+	private String name;
+	private String memberId;
+	private String memberPw;
+	private String phone;
+	private String personNo;
+	private int memberNo;
+	private static int count;
+	
+	//객체 내에 생성자를 작성하지 않으면
+	//기본생성자를 자동으로 생성하여 컴파일함.
+	
+	//기본생성자 선언!
+	//기본생정자 : 처리하는 로직과 매개변수 없음
+	//접근제한자(public) 클래스명(){}
+	public Member() {
+		//memberId="test"; 초기화 블록과 다를 바 없음.
+		System.out.println("기본 생성자 호출!");
+	}
+	
+	//매개변수가 있는 생성자
+	//실행할 때 외부에서 값을 받도록 저장공간을 만듦
+	public Member(String memberId, String memberPw, 
+			String phone,String personNo,String name) {
+		System.out.println("매개변수 memberId" + memberId);
+		System.out.println("매개변수 memberPw" + memberPw);
+		System.out.println("매개변수 name" + name);
+		System.out.println("매개변수 phone" + phone);
+		System.out.println("매개변수 personNo" + personNo);
+	}
+	
+	public void setName(String name) {
+		this.name=name;
+	}
+	public String getName() {
+		return name;
+	}
+	
+	public void setMemberId(String id) {
+		this.memberId=id;
+	}
+	public String getMemberId() {
+		return memberId;
+	}
+	
+	public void setMemberPw(String pw) {
+		this.memberPw=pw;
+	}
+	public String getMemberPw() {
+		return memberPw;
+	}
+	
+	public void setPhone(String phone) {
+		this.phone=phone;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	
+	public void setPersonNo(String no) {
+		personNo=no;
+	}
+	public String getPersonNo() {
+		return personNo;
+	}
+	//외부에서 수정 못하게 set을 만들어 주지 않음
+	public int getMemberNo() {
+		return memberNo;
+	}
+
+}

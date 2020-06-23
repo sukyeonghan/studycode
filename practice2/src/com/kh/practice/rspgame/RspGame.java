@@ -61,7 +61,7 @@ public class RspGame {
 	}
 	
 	public static String intToStr(int num) {
-		//로또 번호 자동 생성기 (중복값 없이 오름차순으로 정렬)프로그램 작성하기
+		
 		String str = "";
 		
 		switch (num) {

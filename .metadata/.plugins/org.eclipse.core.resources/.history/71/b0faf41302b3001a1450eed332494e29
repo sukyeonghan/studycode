@@ -1,0 +1,9 @@
+package test.run;
+
+import test.array.premitive.ArraySample;
+
+public class Main {
+	
+	new ArraySample.test1();
+
+}

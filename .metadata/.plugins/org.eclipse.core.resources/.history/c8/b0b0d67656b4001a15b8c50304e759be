@@ -1,0 +1,9 @@
+package com.oop.model.vo;
+
+public class InitialTest {
+	//초기화 블록
+	private String name;
+	private int size;
+	
+
+}

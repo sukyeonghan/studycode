@@ -1,0 +1,31 @@
+package com.oop.main;
+
+import com.oop.method.Functional;
+
+public class MethodMain {
+	
+	public static void main(String[] args) {
+		Functional fun = new Functional();
+		//반환형 없고, 매개변수 없는 매소드 호출
+		fun.calculator();
+		
+		//반환형 없고 매개변수 있는 메소드 호출
+		//위와 마찬가지로 예약어에 static 없으면 무조건 생성 후 호출
+		
+		//fun.calculator2(10,10,"+");
+	
+		int su=10;
+		int su2=10;
+		fun.calculator2(10,20, new String[] {"*","/"});
+		//두 방식 다 가능
+		
+		
+		//반환형 있고 매개변수 없는 메소드 호출
+		System.out.println(fun.calculator3());
+		//return 뒤 값을 여기로 가져와 리터럴로 찍힌다.
+		//그러나, 1개 값만 반환!
+	
+	}
+	
+
+}

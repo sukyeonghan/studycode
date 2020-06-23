@@ -1,0 +1,9 @@
+package com.oop.model.vo;
+
+public class InitialTest {
+	
+	private String name;
+	private int size;
+	
+
+}

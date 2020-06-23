@@ -1,0 +1,15 @@
+package com.repeat.main;
+
+import com.repeat.controller.RepeatTest;
+
+public class Main {
+	
+	public static void main(String[] argd) {
+		
+		new RepeatTest().basicRepeat();
+	//	new RepeatTest().studentGrade();
+	//	new RepeatTest().whileTest();
+		
+	}
+
+}

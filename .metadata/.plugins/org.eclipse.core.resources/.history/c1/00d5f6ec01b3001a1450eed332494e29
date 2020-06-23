@@ -1,0 +1,10 @@
+package test.array.premitive;
+
+public class ArraySample {
+	
+	public void test1() {
+		
+		
+	}
+
+}

@@ -1,0 +1,30 @@
+package com.oop.model.vo;
+
+public class InitialTest {
+	//초기화 블록
+	private String name; //null
+	private int size; //0
+	
+	//초기화 블록을 설정하여 초기값을 변경하기
+	{
+		//객체를 new연산자로 생성을 할 때 실행되는 로직
+		this.name="Rclass";
+		this.size=100;
+		System.out.println("초기화 블록 실행");
+	}
+	
+	public void setName(String name ) {
+		this.name=name;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setSize(int size ) {
+		this.size=size;
+	}
+	public int getSize() {
+		return size;
+	}
+
+
+}

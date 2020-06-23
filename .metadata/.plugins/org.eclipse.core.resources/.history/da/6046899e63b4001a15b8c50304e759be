@@ -1,0 +1,11 @@
+package com.oop.main;
+
+import com.oop.model.vo.Member;
+
+public class ConstructorMain {
+
+	public static void main(String[] args) { //main+ctrl+space+enter
+		//°´Ã¼ »ý¼º
+		Member m =new Member();
+	}
+}

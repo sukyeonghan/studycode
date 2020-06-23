@@ -1,0 +1,70 @@
+package com.repeat.controller;
+
+public class SelfRepeatTest {
+	
+	public void basicRepeat() {
+		
+		//for문 복습하기
+		
+		System.out.println("i=1부터 시작해서 100까지 세기");
+		for(int i=1; i<=100; i++) {
+			System.out.println(i);
+		}
+		
+		System.out.println("i=0부터 시작해서 100까지 세기");
+		for(int i=0; i<100; i++) {
+			System.out.println(i+1);
+		}
+		
+		System.out.println("짝수만 출력하기");
+		for(int i=2; i<=100; i++) {
+			System.out.println(i++);
+		}
+		
+		System.out.println("100부터 1까지 거꾸로 세기");
+		for(int i=100; i>0; i--) {
+			System.out.println(i);
+		}
+
+		System.out.println("변수 선언해서 한다면?");
+		int su =100;
+		for(int i=0; i<100; i++) {
+			System.out.println(su--);
+		}
+		
+		System.out.println("1부터 100까지 홀수만 출력하기");
+		for(int i=1; i<100; i++) {
+			System.out.println(i++);
+		}
+//		또는
+//		for(int i=1; i<100; i+=2) {
+//			System.out.println(i);
+//		}
+//		또는 for문 안에 if문 넣기
+//		for(int i=0; i<100; i++) {
+//			if(i%2==1) {
+//				System.out.println(i);
+//			}
+//		}
+//		또는 (3부터 출력됨)
+//		int su2 = 1;
+//		for(int i =1; i<50; i++) {
+//			System.out.println(su2+=2);
+//		}
+		
+//		System.out.println("1부터 100까지 전체 합 구하기");
+//		int sum = 0; 
+//		for(int i=1; i<=100; i++) {
+//			sum+=i; //sum = i + sum;
+//		} System.out.println("전체 합 :"+sum);
+		
+		System.out.println("1부터 100까지 전체 합 구하기");
+		int sum = 0;
+		int i=0;
+		for(i=1; i<=100; i++) {
+			sum+=i; //sum = i + sum;
+		} System.out.println("1~" +i+"합 :" +sum);
+		
+	}
+
+}

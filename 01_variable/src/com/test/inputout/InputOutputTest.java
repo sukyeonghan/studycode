@@ -25,7 +25,7 @@ public class InputOutputTest {
 		//소수점 아래 2자리 수까지 표현
 		
 		String name="한수경";
-		int age=27;
+		int age = 27;
 		char gender='여';
 		String name2="이현";
 		int age2=34;

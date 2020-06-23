@@ -1,0 +1,23 @@
+package com.oop.model.vo;
+
+public class FieldAccessTest {
+	
+	//멤버변수의 접근테스트
+	public int publicInt;
+	protected char protectedChar;
+	String defaultString;
+	private double privateDouble;
+	//이거 있다고 지금 쓸 수 있는 것이 아님
+	//new로 할당해서 주소값 생성해야 함. ->>main으로 가기
+	
+	{
+		publicInt = 200;
+		protectedChar='중';
+		defaultString="이거!";
+		privateDouble=180.5;
+				
+	}
+	
+	
+
+}

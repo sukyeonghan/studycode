@@ -1,0 +1,14 @@
+package com.repeat.main;
+
+import com.repeat.controller.SelfRepeatTest;
+
+public class SelfMain {
+	
+	public static void main(String[] args) {
+		
+		//new SelfRepeatTest().basicRepeat();
+		//new SelfRepeatTest().studentGrade();
+		new SelfRepeatTest().whileTest();
+	}
+
+}

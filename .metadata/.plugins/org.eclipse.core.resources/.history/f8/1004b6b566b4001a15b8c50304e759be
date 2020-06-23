@@ -1,0 +1,18 @@
+package com.oop.main;
+
+import com.oop.model.vo.Member;
+
+public class ConstructorMain {
+
+	public static void main(String[] args) { //main+ctrl+space+enter
+		//객체 생성
+		Member m =new Member();//기본데이터가 변수 대입 -> 기본생성자를 호출(실행)
+		m.setMemberId("admin");
+		m.setMemberPw("1234");
+		m.setName("유병승");
+		m.setPhone("01036446259");
+		m.setPersonNo("010224-1234567");
+		System.out.println(m.getMemberNo()+" "+m.getMemberId()+" "+
+		m.getMemberPw()+" " + m.getName()+" "+m.getPhone()+ " "+m.getPersonNo());
+	}
+}

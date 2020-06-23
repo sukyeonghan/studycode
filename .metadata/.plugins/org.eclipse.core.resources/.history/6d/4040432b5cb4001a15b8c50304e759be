@@ -1,0 +1,40 @@
+package com.oop.model.vo;
+
+public class InitialTest {
+	//초기화 블록
+	private String name; //null
+	private int size; //0
+	private int id;//1부터 순차적으로 1더해서 부여
+	//외부에서 수정이 불가능하게!
+	private static int count;
+	
+	//초기화 블록을 설정하여 초기값을 변경하기
+	{
+		//객체를 new연산자로 생성을 할 때 실행되는 로직
+		this.name="Rclass";
+		this.size=100;
+		//this.id++; //1씩 증가
+		this.id=++count;
+		//1부터 나오게 전위연산
+		System.out.println("초기화 블록 실행");
+	}
+	
+	public int getId() {
+		return id; //set안씀.수정 불가능
+	}
+	
+	public void setName(String name ) {
+		this.name=name;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setSize(int size ) {
+		this.size=size;
+	}
+	public int getSize() {
+		return size;
+	}
+
+
+}

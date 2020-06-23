@@ -1,0 +1,18 @@
+package com.oop.main;
+
+import com.oop.method.Functional;
+
+public class MethodMain {
+	
+	public static void main(String[] args) {
+		Functional fun = new Functional();
+		//반환형 없고, 매개변수 없는 매소드 호출
+		fun.calculator();
+		
+		//반환형 없고 매개변수 있는 메소드 호출
+		//위와 마찬가지로 예약어에 static 없으면 무조건 생성 후 호출
+		fun.calculator2(10,10);
+	}
+	
+
+}

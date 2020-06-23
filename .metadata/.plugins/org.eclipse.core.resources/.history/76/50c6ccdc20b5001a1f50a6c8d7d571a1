@@ -1,0 +1,16 @@
+package com.oop.main;
+
+import com.oop.method.Functional;
+
+public class MethodMain {
+	
+	public static void main(String[] args) {
+		Functional fun = new Functional();
+		//반환형 없고, 매개변수 없는 매소드
+		fun.calculator();
+		
+		
+	}
+	
+
+}

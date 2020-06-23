@@ -1,0 +1,24 @@
+package com.oop.model.vo;
+
+public class CommunityBoard {
+	
+	private String boardCheck;
+	private String boardHi;
+	private String boardNotice;
+	
+	public CommunityBoard() {
+		
+	}
+
+	public CommunityBoard (String boardCheck, String boardHi, String boardNotice) {
+		System.out.println("매개변수 boardCheck: " + boardCheck);
+		System.out.println("매개변수 boardHi: " + boardHi);
+		System.out.println("매개변수 boardNotice: "+ boardNotice);
+		
+		this.boardCheck=boardCheck;
+		this.boardHi=boardHi;
+		this.boardNotice=boardNotice;
+				
+		
+	}
+}

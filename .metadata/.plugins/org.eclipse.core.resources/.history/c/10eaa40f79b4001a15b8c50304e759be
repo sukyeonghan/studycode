@@ -1,0 +1,26 @@
+package com.oop.model.vo;
+
+public class CommunityMember {
+	//커뮤니티 사이트를 만들기 위해 회원가입을 받으려고 한다.
+	//회원에 대한 정보를 저장할 객체를 만드세요
+	//매개변수 있는 생성자 이용/각 스터디 3명씩 생성해 출력
+	private String comName;
+	private String comId;
+	private String comPw;
+
+//	public CommunityMember() {
+//		
+//	}
+
+
+	public CommunityMember (String comName, String comId, String comPw) {
+		System.out.println("매개변수 comName:"+comName);
+		System.out.println("매개변수 comId:" + comId);
+		System.out.println("매개변수 comPw:" + comPw);
+		
+//		this.comName=comName;
+//		this.comId=comId;
+//		this.comPw=comPw;
+	}
+	
+}

@@ -1,0 +1,79 @@
+package test.array.premitive;
+
+import java.util.Scanner;
+
+public class ArraySample {
+	
+	public void test1() {
+		//10개의 int배열 선언하고 할당
+		//각 방에 1~100 사이의 임의의 난수를 기록
+		//10개의 정수들의 합계를 구하여 출력하기
+		
+		int [] su = new int [10];
+		int sum = 0;
+		
+		for(int i=0; i<10; i++) {
+			su[i] = ((int)(Math.random()*100)+1);
+			sum+=su[i];
+		}
+		System.out.println(sum);
+	}
+	
+	public void test2() {
+		//10개의 int 선언, 할당
+		//1~100사이의 임의의 정수를 발생시켜 기록하기
+		//10개 값 중 최대값과 최소값 출력하기
+		
+		int [] su = new int [10];
+		int max = su[0];
+		int min = su[0];
+		
+		for(int i=0; i<10; i++) {
+			su[i] = ((int)(Math.random()*100)+1);		
+		}
+		for(int j=0; j<10; j++) {
+			if(max<su[j]) {
+				max=su[j];
+			}
+			if(min>su[j]) {
+				min=su[j];
+			}
+		}
+		System.out.println("최대값 : "+max+"\n최소값 :"+min);
+	}
+	
+	public void test3() {
+		//10개의 byte 배열 선언 및 할당
+		//임의의 난수를 기록하고 짝수들의 합계만 구하여 출력하기
+		
+		byte [] su = new byte[10];
+		int sum = 0; //바이트로 더하면 최대값127을 넘어서면 최소값-128으로 돌아감!
+		
+		for(int i=0; i<10; i++) {
+			su[i] = ((byte)(Math.random()*Byte.MAX_VALUE));
+			if(su[i]%2==0) {
+				System.out.print(su[i]+" ");
+				sum+=su[i];
+			}
+		}
+		System.out.println("짝수합 :"+sum);
+	}
+
+	public void test4() {
+		//숫자로 된 문자열을 입력받아 각 자리의 숫자들의 합을 구하여 출력하기
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("숫자로 된 문자열을 입력하세요 :");
+		String suString = sc.next();
+		
+		String [] str = new String[suString.length()];
+		int sum = 0;
+		
+		for(int i=0; i<suString.length(); i++) {
+			str[i] = suString.substring(0,suString.length());
+			sum+=Integer.parseInt(str[i]);
+		}
+		System.out.println("합계 : "+ sum);
+	}
+	
+}

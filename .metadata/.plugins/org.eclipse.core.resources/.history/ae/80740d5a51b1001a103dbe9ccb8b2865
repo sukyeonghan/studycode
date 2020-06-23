@@ -1,0 +1,345 @@
+package com.array.controller;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class ArrayTest {
+	
+	public void basicArray() {
+		//기본 배열 선언과 할당하기
+		
+		int[] intArr = new int[3];
+		//참조형 변수임. 주소값이 생겼으니까 할당을 해야한다.
+		//기본형 변수는 int,double...직접 선언한 것
+		double[] doubleArr=new double[3];
+	
+		String[] strArr=new String[3];
+		
+		char[] chArr=new char[3];
+		
+		//디폴프값 확인
+		System.out.println(doubleArr[0]); //0.0
+		System.out.println(strArr[0]); //null
+		System.out.println(chArr[0]); //(공백)
+		
+		//값을 대입/출력하기 - 자료형 맞추기
+		intArr[0] = 20;
+		//intArr[1] = "저녁"; 다른 타입은 안 됨
+		System.out.println(intArr[0]);
+		System.out.println(intArr[1]); 
+		//선언안했는데 0이 출력됨. 힙 영역에 들어갈 때 자동으로 기본값(default) 0 생성됨.
+		//String 은 null; double은 0.0 ...
+		//int a;
+		//System.out.println(a); //이건 값 안넣어서 출력안됨.
+	
+		//String 5개를 저장할 수 있는 공간을 확보하고
+		//자신이 좋아하는 과일을 5개 변수에 저장하고 출력하기
+		String[] strArr2 = new String[5];
+		strArr2[0] = "사과"; //strArr2[0] 이것 자체가 변수명
+		strArr2[1] = "복숭아";
+		strArr2[2] = "딸기";
+		strArr2[3] = "수박";
+		strArr2[4] = "포도";
+		System.out.println(strArr2[0]);
+		System.out.println(strArr2[1]);
+		System.out.println(strArr2[2]);
+		System.out.println(strArr2[3]);
+		System.out.println(strArr2[4]);
+		
+		//for문을 이용하여 출력하기
+		for(int i=0;i<5;i++) {
+			//System.out.println(i); 0,1,2,3,4
+			System.out.println(strArr2[i]);
+		}
+		
+		strArr2=new String[3];
+		System.out.println("[3]"+strArr2.length); //3이 나옴
+		strArr2=new String[100];
+		System.out.println("[100]"+strArr2.length); //100이 나옴
+		//재할당됨. 이전건 접속할 수 없어 쓰레기 됨.gc(가비지 컬렉터)가 지움
+		//ArryIndexOutOfBoundsException:3 오류뜸 !!중요!!!!
+		//저장 범위를 넘어섬. 더 많은(가지고 있지 않은) 인덱스 번호를 입력했을 때
+		//for문을 이용한 초기화 관련
+		
+		//for문을 이용하여 값 대입하기
+		//for(int i=0;i<5; i++) {
+		for(int i=0;i<strArr2.length; i++) {
+			//선언할 때 길이가 여기 들어감.
+			strArr2[i] = "수박";
+		}
+		//for(int i =0; i<5; i++) {
+		for(int i=0;i<strArr2.length; i++) {
+			System.out.println(strArr2[i]);
+		}//한 번에 동일한 값을 넣을 수 있음
+		
+		//정수 5개를 저장할 수 있는 공간을 확보하고
+		//각 공간에 1~5까지 값을 대입하기
+		
+		int[] a =new int[5];
+		for(int i =0; i<a.length; i++) {
+			a[i]=i+1;
+		}
+		for(int i =0;i<a.length;i++) {
+		System.out.println(a[i]);
+		}
+		
+		//이름을 입력받고 출력 프로그램 만들기
+		//1.몇명 이름을 입력할지 입력받고
+		//2.그 수 만큼 배열을 만들어 이름을 입력받아 저장하고
+		//3.배열을 출력하기
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("인원 수 :");
+		int pe = sc.nextInt();
+		
+		String[] pe2 = new String[pe];
+		//이름을 저장할 수 있는 배열로 만들기
+		//pe2[0]=이름..
+		for(int i=0; i<pe2.length; i++) {
+			System.out.print("이름 입력 : ");
+			pe2[i]=sc.next();
+		}
+		for(int i=0; i<pe2.length; i++) {
+			System.out.println(pe2[i]);	 	
+		}
+		
+		//배열을 선언할 때
+		//선언과 동시에 초기화
+		int age = 19;
+		int[] numbers= {1,2,3,4,5};
+		//0번 인덱스에 1,1번 인덱스에 2, 2번 인덱스에 3..
+		System.out.println(numbers[2]); //3이 나옴
+		
+		String[] nn= {"김대욱","인하준","이하영","오수완"};
+		System.out.println(nn[0]); //김대욱이 나옴
+		//nn = {"원빈","송중기","공유","홍석천"};
+		//이렇게 하면 이미 선언된 거 다시 할당이 안 됨
+		nn=new String[] {"원빈","송중기","공유","홍석천"};
+		System.out.println(nn[0]);
+		//이렇게 재할당 가능
+	}
+	public void arrayCopy() {
+		//얕은 복사==주소값을 복사해서 heap영역에 생성된 배열변수를 같이 쓰는 것!
+		char[] chs= {'A','B','C','D'};
+		char[] copyCh=chs;
+		chs[0]='나'; //수정하면 둘 다 바뀜
+		copyCh[copyCh.length-1]='다';
+		//이렇게 하면 'D'자리를 바꿈.길이는4니까.
+		
+		System.out.println("==== chs 원본값 ===");
+		for(int i=0; i<chs.length;i++) {
+			System.out.print(chs[i]);
+		}
+		System.out.println();
+		System.out.println("=== 복사된 값 ===");
+		for(int i=0; i<copyCh.length;i++) {
+			System.out.print(copyCh[i]);
+		}
+		System.out.println();
+		System.out.println(chs+" : "+copyCh);
+		//똑같은 위치에 가서 참조한다.같은 주소를 가지고 있음
+		
+		//깊은 복사(4가지방법)
+		//heap영역에 배열공간을 추가적으로 만들어서 값을 복사하는 것!
+		//주소값도 각자. 수정한 곳만 수정됨.
+		//원본, 사본 두고 작업하고 싶을 때/수정사항 확인하고 싶을 때
+		String[] str= {"집","에","가","자"};
+		String[] str2 = new String[str.length];
+		
+		//1. for문 이용 복사(전체복사)
+		for(int i =0 ; i<str.length; i++) {
+			str2[i]=str[i]; //복사해서 넣는 것
+		}
+		str[0]="공부"; //str => 공부 에 가 자
+		str2[str2.length-1]="지말자"; //str2=>집 에 가 지말자
+		for(int i =0 ; i<str.length; i++) {
+			System.out.print(str[i]);
+		}
+		System.out.println();
+		for(int i =0 ; i<str.length; i++) {
+			System.out.print(str2[i]);
+		}
+		System.out.println();
+		
+		//2. System.arraycopy메소드 이용 복사하기
+		//원하는 위치의 값을 원하는 위치에 복사 가능(이미 공간만들어놓고 값만 복사)
+		String[] str3=new String[str.length];
+		//System.arraycopy(str,0,str3,0,str.length);//전체 복사
+		System.arraycopy(str, 2, str3, 2, 2);
+		//str(배열)(복사할 곳)의 2번째 인덱스 값을 str3(배열)(복사될 곳)의 2번째 인덱스 값부터 길이 2만큼 복사
+		//글자니까 공백은 null값으로 나타남
+		//복사할 길이 개수 쓸 때 길이 계산 잘해야 함->ArrayIndex~~ 오류 난다 
+		
+		//위2개는 배열을 직접 할당해서 할당한 배열 변수에 값을 복사하는 것
+		
+		//for(int i=0; i<str.length...) 어려우니까
+		//for each문을 사용해보자
+		//전체 출력할 때 주로 씀.인덱스 따로 구분해서 처리할 수 없음
+		//배열이나 collection객체의 값에 접근할 때 사용
+		//for(배열자료형의 변수 : 배열 또는 collection객체) {로직}
+		System.out.println();
+		for(String v : str) { //변수 : 배열(여러 값을 가지고 있는 것)//공부 에 가 자
+			System.out.print(v);
+		}
+		System.out.println();
+		for(String v : str3) {
+			System.out.print(v);
+		}
+		System.out.println();
+		
+		//Arrays.copyof(), clone()은 배열변수만 선언하고 대입해주면 됨. *할당이 필요없음!(new~로 생성하는 거)
+		//Arrays.copyof()메소드 이용해서 복사
+		//배열을 할당하지 않고 변수만 선언한 후 복사함
+		String[] str4; //선언만 함.지금 아무것도 없는 상태
+		str4 = Arrays.copyOf(str,str.length);//Arrays.copyOf가 주소값 생성해서 배열 넣어준다. 
+		str4[0]="곧 퇴근!"; //얘도 따로따로 수정.
+		for(String temp : str4) {
+			System.out.print(temp);
+		}
+		System.out.println();
+		
+		//무전 0번부터 대입. 받는 위치를 조정할 수 없음.
+		String[] str5;
+		str5 = Arrays.copyOf(str,2);
+		System.out.println(str5);
+		for(String v : str5) {
+			System.out.print(v);
+		}
+		
+		//clone() -> 객체(배열도 하나의 객체)를 복사하는 기능을 하는 메소드
+		//배열변수명.clone();
+		//조정할 수 없이 무조건 통채로 다 저장
+		str5=str.clone();
+		for(String v : str5) {
+			System.out.println(v);
+		}
+	}
+	
+	//배열에 값을 넣는 기능
+	//원래 기능별로 나눠져있지만(또는 다른 클래스에)
+	//우린 배우는 거니까 이어서 쓸 뿐임.
+	public void inputArray(String[] temp) {
+		Scanner sc = new Scanner(System.in);
+		
+		for(int i=0; i<temp.length; i++) {
+			System.out.print("입력 :");
+			temp[i] = sc.nextLine();
+		}
+	}
+	public void printArray(String[] t) {
+		
+		for(int i=0; i<t.length; i++) {
+			System.out.print(t[i]);
+			
+		}
+	}
+	
+	
+	public void arrayTest() {
+		int[] nums= {1,2,3,4,5};
+		//nums=new int[5];
+		//nums[0]=1;
+		//nums[1]=2;
+		//nums[2]=3;
+		//nums[3]=4;
+		//nums[4]=5;
+		//이 작업들을 한 줄로 처리함.
+		//들어갈 데이터가 정해져 있으면 이렇게 하면 편함
+		nums=new int[]{4,5,6,7,8};
+		//하면 재할당됨
+	}
+	//이차원 배열 사용하기
+	public void doubleArray() {
+		
+		//2차원 배열
+	    //2개 이상의 배열이 묶여있는 변수 
+		//한 칸,한 칸이 변수임.
+		//자료형[행][열] 배열명
+	    //마찬가지로 할당하면 힙 영역에 생성
+		//배열 할당 : 자료형[][] 배열명 = new자료형[행크기][열크기];
+	// int[][] arr = new자료형[2][4];
+	// 주소값이...?
+	//배열이 3개 - 주소값을 가지고 있는 배열, , .
+		//이차원 배열 선언하기
+		int[][] numbers=new int[3][3];
+		//이차원 배열 값 대입하기
+		numbers[0][0]=300;
+		numbers[0][1]=100;
+		numbers[0][2]=200;
+		numbers[1][0]=30;
+		numbers[1][1]=20;
+		numbers[1][2]=50;
+		
+		//이차원 배열 출력하기
+		System.out.print(numbers[1][1]); //1번
+		System.out.println(numbers[0]); //0번에 연결되어 있는 인덱스의 주소
+		System.out.println(numbers[1]); //1번에 연결되어 있는 인덱스의 주소
+		System.out.println(numbers);
+		
+		//이차원 배열의 선언과 동시에 초기화!
+		int[] a= {1,2,3,4};
+		int[][] num2= {{1,2,3,4},{5,6,7,8}};
+		//new int[2][4];가 된다
+		
+	
+		//numbers=new int[][]{{10,20,30,40},{50,60,70,80}};
+		//위에서[3][3]이었음. 이제 [2][4]가 되었음
+		
+		//for문을 이용하여 이차원배열 처리하기!
+		
+		numbers=new int[][]{{10,20},{50,60}};
+		numbers=new int[5][];
+		numbers[0]=new int[10];
+		numbers[1]=new int[2];
+		//이렇게 각각 다른 길이로 설정할 수 있다.
+		
+		//이렇게 바꿔서 출력하면 오류남. 그래서 length를 씀
+		//numbers 출력하기
+		//for(int i=0; i<3; i++) {
+		//for(int j=0;j<3;j++) {
+		
+		for(int i=0; i<numbers.length; i++) { //외곽에 있는 길이
+			for(int j=0; j<numbers[i].length; j++) {
+			//행마다 길이 바뀔 수도 있으니까 열길이로 받는다..
+			//System.out.println(i+" :"+j);
+				//0:0 0:1 0:2 1:0 ...출력
+			System.out.print(numbers[i][j]+" ");
+		}
+		System.out.println();
+	}
+					
+}
+		
+		public void doubleArray22() {
+			//행의 길이가 15, 열의 길이가 11인 2차원 배열을 선언하기
+			//1~165까지 인덱스 순서대로 값을 초기화하고 그 값을 출력하기
+			int a =0;
+			int[][] arr = new int[15][11]; 
+			for(int i=0; i<arr.length; i++) {
+				for(int j=0; j<arr[i].length; j++) {
+				arr[i][j]=a++;
+				System.out.println(a);
+				}
+			}
+			
+			//12명의 학생들을 출석부 순으로 2열 6행으로 자리배치하여 분단을 나누고,
+			//1분단 왼쪽부터 오른쪽, 1행에서 아래 행으로 번호순으로 자리를 배치하는 프로그램을 작성하기
+			//1차원 배열을 2차원 배열로 옮기기
+			
+			String [] aa = {"1.홍길동","2.이순신","3.유관순","4.윤봉길","5.장영실",
+					"6.임꺽정","7.장보고","8.이태백","9.김정희","10.대조영","11.김유신","12.이사부"};
+			System.out.println(aa[]);
+			//for(int i=1; i<=12; i++) {
+			//	System.out.println(aa);
+			//}
+		
+	
+	}
+}
+	
+	
+	
+	
+
+

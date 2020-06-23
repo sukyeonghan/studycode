@@ -1,0 +1,15 @@
+package com.oop.model.vo;
+
+public class Member1 {
+	
+	private String id;
+	private String pw;
+	private String name;
+	private String email;
+	private String address;
+	
+	public
+	
+	
+
+}

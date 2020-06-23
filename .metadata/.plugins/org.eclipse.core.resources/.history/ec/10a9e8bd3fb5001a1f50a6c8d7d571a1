@@ -1,0 +1,11 @@
+package com.oop.model.vo;
+
+public class Student {
+
+	private String name="ÇÑ¼ö°æ";
+	private int grade = 3;
+	private int rclass = 2;
+	private int number = 20;
+	private double height = 160;
+	private double weight = 45;
+}

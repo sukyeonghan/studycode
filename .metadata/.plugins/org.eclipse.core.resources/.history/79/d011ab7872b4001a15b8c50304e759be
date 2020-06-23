@@ -1,0 +1,22 @@
+package com.oop.model.vo;
+
+public class CommunityMember {
+	
+	private String comName;
+	private String comId;
+	private String comPw;
+
+	public CommunityMember() {
+		
+	}
+}
+
+	public CommunityMember (String comName, String comId, String comPw) {
+		System.out.println("매개변수 comName:"+comName);
+		System.out.println("매개변수 comId:" + comId);
+		System.out.println("매개변수 comPw:" + comPw);
+		
+		this.comName=comName;
+		this.comId=comId;
+		this.comPw=comPw;
+	}

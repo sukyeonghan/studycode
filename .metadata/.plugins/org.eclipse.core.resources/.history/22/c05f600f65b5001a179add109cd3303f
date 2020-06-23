@@ -1,0 +1,27 @@
+package com.oop.main;
+
+import com.oop.model.vo.CommunityMember;
+
+public class TestMain {
+	public static void main(String[] args) {
+		
+			//회원 3명의 정보를 저장하는 객체를 만들고 출력하기
+			CommunityMember c = new CommunityMember();
+			c.setComName("한수경");
+			c.setComId("user01");
+			c.setComPw("1234");
+			c.setPoint(100.0);
+			
+			CommunityMember c1 = new CommunityMember("한수","user02","1234");
+			CommunityMember c2 = new CommunityMember("이세민","user03","3444",10.2);
+			
+			System.out.println(c.getComName()+c.getComId()+c.getComPw()+c.getPoint());
+			System.out.println(c1.getComName()+c1.getComId()+c1.getComPw()+c1.getPoint());
+			System.out.println(c2.getComName()+c2.getComId()+c2.getComPw()+c2.getPoint());
+		
+	}
+	
+	
+	
+
+}

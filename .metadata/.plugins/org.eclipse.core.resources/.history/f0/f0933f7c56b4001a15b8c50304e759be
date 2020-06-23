@@ -1,0 +1,22 @@
+package com.oop.model.vo;
+
+public class InitialTest {
+	//초기화 블록
+	private String name; //null
+	private int size; //0
+	
+	public void setName(String name ) {
+		this.name=name;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setSize(String size ) {
+		this.size=size;
+	}
+	public String getSize() {
+		return size;
+	}
+
+
+}

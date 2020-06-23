@@ -1,0 +1,24 @@
+package com.oop.model.vo;
+
+public class CommunityBoard {
+	
+	private String board1;
+	private String board2;
+	private String board3;
+	
+	public CommunityBoard() {
+		
+	}
+
+	public CommunityBoard (String board1, String board2, String board3) {
+		System.out.println("매개변수 board1: " + board1);
+		System.out.println("매개변수 board2: " + board2);
+		System.out.println("매개변수 board3: "+ board3);
+		
+		this.board1=board1;
+		this.board2=board2;
+		this.board3=board3;
+				
+		
+	}
+}

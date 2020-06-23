@@ -1,0 +1,12 @@
+package com.oop.model.vo;
+
+public class FieldAccessTest {
+	
+	//멤버변수의 접근테스트
+	public int publicInt;
+	protected char protectedChar;
+	String defaultString;
+	private double privateDouble;
+	
+
+}

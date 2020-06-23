@@ -1,0 +1,9 @@
+package com.oop.model.vo;
+
+public class CommunityBoard {
+	
+	private String board1;
+	private String board2;
+	private String board3;
+
+}

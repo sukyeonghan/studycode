@@ -8,10 +8,11 @@ package com.oop.model.vo;
 	 //같은 패키지에서 멤버변수 직접접근하기
 	 {
 		 FieldAccessTest fct = new FieldAccessTest();
+		 
 		 fct.publicInt = 200;
 		 fct.protectedChar=0;
 		 fct.defaultString="이건 될까?";
-		 //fct.privateDouble=180.5; 이것만 에러남
+		 //fct.privateDouble=180.5; 같은 클래스에서만 가능!
 				
 		 
 	 }

@@ -1,0 +1,52 @@
+package com.oop.model.vo;
+
+public class Member {
+	
+	private String name;
+	private String memberId;
+	private String memberPw;
+	private String phone;
+	private String personNo;
+	private int memberNo;
+	private static int count;
+	
+	public void setName(String name) {
+		this.name=name;
+	}
+	public String getName() {
+		return name;
+	}
+	
+	public void setMemberId(String id) {
+		this.memberId=id;
+	}
+	public String getId() {
+		return memberId;
+	}
+	
+	public void setMemberPw(String pw) {
+		this.memberPw=pw;
+	}
+	public String getMemberPw() {
+		return memberPw;
+	}
+	
+	public void setPhone(String phone) {
+		this.phone=phone;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	
+	public void setPersonNo(String no) {
+		personNo=no;
+	}
+	public String getPersonNo() {
+		return personNo;
+	}
+	//외부에서 수정 못하게 set을 만들어 주지 않음
+	public int getMemberNo() {
+		return memberNo;
+	}
+
+}
