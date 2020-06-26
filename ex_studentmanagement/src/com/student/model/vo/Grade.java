@@ -22,26 +22,30 @@ public class Grade {
 	public int getKor() {
 		return kor;
 	}
+	
 	public void setEng(int eng) {
 		this.eng=eng;
 	}
-	public int eng() {
+	public int getEng() {
 		return eng;
 	}
+	
 	public void setMath(int math) {
 		this.math=math;
 	}
-	public int math(int math) {
+	public int getMath() {
 		return math;
 	}
+	
 	public void setCoding(int coding) {
 		this.coding=coding;
 	}
 	public int getCoding() {
 		return coding;
 	}
-public String printGrade() {
-	return ""+kor+" "+eng+ " "+math+" "+coding+" "+
-(kor+eng+math+coding)+" "+(kor+eng+math+coding)/4.0;
-}
+	
+	public String printGrade() {
+		return ""+kor+" "+eng+ " "+math+" "+coding+" "+
+	(kor+eng+math+coding)+" "+(kor+eng+math+coding)/4.0;
+	}
 }
