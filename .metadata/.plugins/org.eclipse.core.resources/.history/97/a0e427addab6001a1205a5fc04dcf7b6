@@ -1,0 +1,21 @@
+package com.inherit.main;
+
+import com.override.model.vo.Cat;
+import com.override.model.vo.Chicken;
+import com.override.model.vo.Dog;
+
+public class OverrideTest {
+
+	public static void main(String[] args) {
+		
+		Dog d = new Dog("개과","까우",'M',"잡식");
+		Cat c = new Cat("고양이과","두리","F","잡식");
+		Chicken ch = new Chicken("조류","처돌이",'F',"잡식");
+		
+		System.out.println(d.bark());
+		System.out.println(c.bark());
+		System.out.println(ch.bark());
+		
+	}
+	
+}

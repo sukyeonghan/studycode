@@ -1,0 +1,41 @@
+package com.oop.main;
+
+import com.oop.model.vo.CommunityBoard;
+import com.oop.model.vo.CommunityMember;
+
+public class TestMain {
+	public static void main(String[] args) {
+		
+			//회원 3명의 정보를 저장하는 객체를 만들고 출력하기
+			CommunityMember c = new CommunityMember();
+			c.setComName("한수경");
+			c.setComId("user01");
+			c.setComPw("1234");
+			c.setPoint(100.0);
+			
+			CommunityMember c1 = new CommunityMember("한수","user02","1234");
+			CommunityMember c2 = new CommunityMember("이세민","user03","3444",10.2);
+			
+			System.out.println(c.getComName()+c.getComId()+c.getComPw()+c.getPoint());
+			System.out.println(c1.getComName()+c1.getComId()+c1.getComPw()+c1.getPoint());
+			System.out.println(c2.getComName()+c2.getComId()+c2.getComPw()+c2.getPoint());
+	
+			
+			//커뮤니티 게시판 정보 받을 객체 만들고 출력하기
+			CommunityBoard cb = new CommunityBoard();
+			
+			//cb.setBoardCheck("출첵");
+			cb.setBoardHi("안녕하세요");
+			cb.setBoardNotice("열공하세요");
+			cb.setCount(6);
+			
+			CommunityBoard cb2 = new CommunityBoard("체크","하이","오늘은 쉽니다");
+			CommunityBoard cb3 = new CommunityBoard("체키라웃","안녕","복습해라",5);
+			
+			System.out.println(cb.getBoardcheck()+cb.getBoardHi()+cb.getBoardNotice()+cb.getCount());
+			System.out.println(cb2.getBoardcheck()+cb2.getBoardHi()+cb2.getBoardNotice()+cb2.getCount());
+			System.out.println(cb3.getBoardcheck()+cb3.getBoardHi()+cb3.getBoardNotice()+cb3.getCount());
+	
+	}
+	
+}

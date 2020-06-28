@@ -1,0 +1,44 @@
+package com.poly.main;
+
+import com.poly.model.vo.Animal;
+import com.poly.model.vo.Cat;
+import com.poly.model.vo.Duck;
+import com.poly.model.vo.Employee;
+import com.poly.model.vo.Lion;
+import com.poly.model.vo.Person;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		//다형성 활용하기
+		//부모 타입으로 설정되어 있는 변수에
+		//자식 타입의 객체가 대입 될 수 있는 것!
+		Cat tom = new Cat();
+		Duck donald = new Duck();
+		Animal ani = new Animal();
+		ani = new Cat(); //다형성 //변수명 하나로 여러 개를 받을 수 있다는 장점이 있다
+		System.out.println(ani);
+		ani = new Duck(); //다형성
+		System.out.println(ani);
+		ani = new Lion(); //에러! 상속관계가 없기 때문에! 다형성이 적용이 안됨.
+		System.out.println(ani);
+		//상속 관계가 전제 조건이 됨!
+		
+		//부모는 자식 타입의 변수에 들어갈 수 있니?
+//		tom = new Animal();//부모타입은 자식타입에게 대입될 수 없다!
+		
+		//다형성에 의해 자식 객체가 부모 타입으로 대입되면,
+		//부모객체의 내용만 볼 수 있게 설정됨(업캐스팅)
+		Person p = new Employee("설진호",48,"포천","개발팀","연구원",100);//person인 척 함
+		System.out.println(p.getName());
+		System.out.println(p.getDepartment());//부모가 가지고 있는 데이터만 볼 수 있음
+		//자식의 내용은 볼 수 없게 됨. 뒤3개는 쓸 수 없게 되어 이용할 필요가 없게 됨.
+	
+		//부모타입으로 대입된 자식객체의 데이터에 접근을 하려면
+		//강제형변환을 해야 함.
+		
+		(P)(p.getDepartment());
+	
+	}
+
+}

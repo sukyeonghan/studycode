@@ -1,0 +1,75 @@
+package com.first.test;
+
+import java.util.Calendar;
+import java.util.Scanner;
+
+public class TestMain {
+	
+	public static void main(String[] args) {
+		
+		Test test = new Test();
+		System.out.println(test.getName());
+	
+		
+	
+		//가위바위보 게임
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("=== 가위, 바위, 보 게임! ===");
+		
+		while(true) {
+			
+			System.out.println("번호를 입력하세요. \n 1.가위 2.바위  3.보 ");
+			int user = sc.nextInt();
+			
+			int com = (int)(Math.random()*3)+1;  
+			//임의 수 출력. Math클래스에 random() 메소드가 있음
+			//한 번 실행할 때마다 실수 임의의 값(0.0~1.0사이) 나옴
+			//그냥 int로 바꾸면 0이 나옴..()쳐서 먼저 계산 해야함. 형변환이 우선순위여서
+			//1~10까지면 *10+1, 써져있는 거 n-1 까지, +1을 더하면 1~n까지의 수
+			
+			
+			int game = user-com;
+			
+			if(game==-2||game==1) {
+				System.out.println("사용자가 이겼습니다.");
+				break;
+			} else if(game==2||game==-1) {
+				System.out.println("컴퓨터가 이겼습니다.");
+				break;
+			} else {
+				System.out.println("비겼습니다. 다시 한 번,\n");
+			}
+		
+		} 		
+}
+	
+	
+		
+		
+		public void test7() {
+			//문자열 변수를 초기화한 후 
+			//생년,생월,생일,성별에 대한 값을 분리 추출하기 - substring() 사용
+			//java.util.Date 등을 사용해서 추출한 생년월일 값으로 날짜 데이터 만들기
+			//생일의 요일이 무슨 요일이었는지 제공되는 메소드를 사용해서 출력하기
+			//성별값이 1이면 남자, 2면 여자라고 출력하기
+			//날짜 데이터로 바꾼 값에서 오늘 날짜의 년도를 빼서 나이 출력하기
+			
+			String personID = "881225-1234567";
+			int myYear = Integer.parseInt(personID.substring(0,2))+1900;
+			int myMonth = Integer.parseInt(personID.substring(2,4));
+			int myDate = Integer.parseInt(personID.substring(4,6));
+			int gender = Integer.parseInt(personID.substring(7,8));
+			
+			Calendar cal = Calendar.getInstance();
+			int year = cal.get(Calendar.YEAR);
+			
+			int age = year-myYear;
+			System.out.println(age+1);
+		}
+
+	
+		
+	}
+
+

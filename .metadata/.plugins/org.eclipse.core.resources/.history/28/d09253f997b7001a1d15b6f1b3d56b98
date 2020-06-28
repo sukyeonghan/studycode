@@ -1,0 +1,8 @@
+package com.kh.model.vo;
+
+public class Driver {
+	
+	private int year;
+	private int crush;
+
+}

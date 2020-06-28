@@ -1,0 +1,9 @@
+package com.kh.controller;
+
+import com.kh.model.vo.Person;
+
+public class PersonController {
+	
+	Person[] persons = new Person[10];
+
+}

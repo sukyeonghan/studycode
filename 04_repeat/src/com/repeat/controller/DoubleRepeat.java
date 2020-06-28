@@ -122,6 +122,7 @@ public class DoubleRepeat {
 				msg+=temp;
 			}
 		}
+		
 		//중첩반복문에서 break문 사용하기
 		dinner:
 		for(int i =2; i<9; i++) {

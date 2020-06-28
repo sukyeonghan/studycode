@@ -1,0 +1,46 @@
+package com.student.controller;
+
+import com.student.model.dao.StudentDB;
+import com.student.model.vo.Student;
+import com.student.view.Mainview;
+
+public class StudentManager {
+
+	private StudentDB db = new StudentDB(); 
+	
+	
+	public void mainview() {
+		new Mainview().mainMenu(this);
+	}
+
+	//학생 등록 서비스
+	public void enrollStudent() {
+		
+		Student s =new Mainview().enrollStudent();
+		System.out.println(s.information());
+		boolean result = db.saveStudent(s); //DB에 저장하기
+		System.out.println(result);
+		
+		new Mainview().printMsg(result?"입력성공":"입력실패");
+		
+	}
+	
+	//이름으로 조회 서비스 구현
+	public void searchName() {
+		//이름으로 조회
+		String name = new Mainview().inputName();
+		Student s = db.searchName(name);
+		if(s==null) {
+			new Mainview().printMsg("조회결과가 없습니다.");
+		}else {
+			System.out.println("조회결과 : "+ s.information());
+		}
+	}
+	
+	
+	public void searchAll() {
+		Student[] students=db.searchAll();
+		new Mainview().printStudents(students);
+	}
+	
+}

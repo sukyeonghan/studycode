@@ -1,0 +1,16 @@
+package com.first.test.classDiagram;
+
+public class SquareController {
+	
+	private Shape s = new Shape();
+
+	public SquareController() {
+	// TODO Auto-generated constructor stub
+	}
+	
+	public double calcPerimeter(double height, double width) {
+		
+	}
+	
+
+}

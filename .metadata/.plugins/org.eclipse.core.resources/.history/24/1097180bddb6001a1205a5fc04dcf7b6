@@ -1,0 +1,16 @@
+package com.override.model.vo;
+
+public class Dog extends Animal {
+	
+	public Dog(String category, String name, char gender, String diet) {
+		super(category, name, gender, diet);
+	}
+	
+	//오버라이딩 처리하여 맞게 변경 재정의
+	//매소드 선언부는 부모의 매소드와 동일하게 작성함
+	//구현부는 각 개체에 맞게 로직을 구성
+	
+	public String bark() {
+		return "멍멍";
+	}
+}

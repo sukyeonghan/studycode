@@ -1,0 +1,21 @@
+package com.inherit.model.vo;
+
+public class Employee {
+	//이름, 나이, 주소, 전화번호,직책,부서,연봉
+	
+	private String name;
+	private int age;
+	private String address;
+	private String phone;
+	private String department;
+	private String jod;
+	private int salary;
+	
+	public Employee() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	
+
+}

@@ -1,0 +1,15 @@
+package com.oop.method;
+
+import com.oop.model.vo.Car;
+
+public class Functional {
+	
+	public void car1() {
+		
+		
+		
+		
+		
+	}
+
+}

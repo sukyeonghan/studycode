@@ -1,0 +1,16 @@
+package com.poly.controller;
+
+import com.poly.model.vo.Employee;
+import com.poly.model.vo.Singer;
+
+public class Funtional {
+	
+	//Employee내용을 출력하는 기능
+	public void print(Employee e) {
+		System.out.println(e.getName()+e.getAge()+e.getAddress());
+	}
+	//singer 내용을 출력하는 기능 //오버로딩
+	public void print(Singer s) {
+		System.out.println(s.getName()+s.getAge()+s.getAddress());
+	}
+}

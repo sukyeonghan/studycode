@@ -1,0 +1,7 @@
+package com.inherit.model.vo;
+
+public class ObjectTest {
+	//extends 안써도 
+	//기본생성자만 있는 상태
+
+}

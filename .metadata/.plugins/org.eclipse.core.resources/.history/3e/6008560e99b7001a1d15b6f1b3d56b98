@@ -1,0 +1,20 @@
+package com.kh.controller;
+
+import com.kh.model.vo.Person;
+
+public class PersonController {
+	
+	Person[] persons = new Person[10];
+	
+	persons[0] = new Student();
+	persons[1] = new Employee();
+	persons[2] = new Driver();
+	persons[3] = new Student();
+	persons[4] = new Employee();
+	persons[5] = new Driver();
+	persons[6] = new Student();
+	persons[7] = new Employee();
+	persons[8] = new Driver();
+	persons[9] = new Person();
+
+}

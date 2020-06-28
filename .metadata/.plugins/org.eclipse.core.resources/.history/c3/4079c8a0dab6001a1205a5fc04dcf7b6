@@ -1,0 +1,8 @@
+package com.override.model.vo;
+
+public class Dog extends Animal {
+	
+	public Dog(String category, String name, char gender, String diet) {
+		super(category, name, gender, diet;)
+	}
+}

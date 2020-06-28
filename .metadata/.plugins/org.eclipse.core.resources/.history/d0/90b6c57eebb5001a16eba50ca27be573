@@ -1,0 +1,9 @@
+package com.student.main;
+
+public class Main {
+	public static void main(String[] args) {
+		//프로그램을 실행시키는 클래스
+		new StudentManager().mainView();
+	}
+
+}

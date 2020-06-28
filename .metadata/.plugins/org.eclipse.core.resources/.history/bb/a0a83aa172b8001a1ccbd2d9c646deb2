@@ -1,0 +1,21 @@
+package com.first.test;
+
+import java.util.Scanner;
+
+public class TestMain {
+	
+	public static void main(String[] args) {
+		
+		Test test = new Test();
+		System.out.println(test.getName());
+		
+	Scanner sc = new Scanner(System.in);
+	System.out.println("나이 입력 : ");
+	String g = sc.next();
+	int a=g.length();
+	int ab = Integer.parseInt(g);
+	
+		
+	}
+
+}

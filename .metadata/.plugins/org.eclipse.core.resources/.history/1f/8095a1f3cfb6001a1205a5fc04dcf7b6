@@ -1,0 +1,32 @@
+package com.inherit.main;
+
+import com.inherit.model.vo.Employee;
+import com.inherit.model.vo.Student;
+import com.inherit.model.vo.Teacher;
+
+public class InheritUse {
+	
+	public static void main(String[] args) {
+		//아 생각을 해보니 , 내가 관리하고 이쓴 객체들의(STUDENT,EMPLOYEE.TEACHER)
+		//이름은 2글자 이상만 들어갈 수 있게 하자
+		
+		Teacher t = new Teacher();
+		t.getName();
+		t.getAge();
+		t.setName("한");
+		Student s = new Student();
+		s.setName("한");
+		Employee e = new Employee ();
+		s.setName("한");
+		
+		//관리하고 있는 전체 객체에 성별을 추가한다.
+		//person에 추가하면 자식객체들도 다 쓸 수 있다
+		e.setGender('남');
+		s.setGender('여');
+		t.setGender('M');
+		
+		s = new Student();
+		System.out.println(s.information());
+	}
+
+}

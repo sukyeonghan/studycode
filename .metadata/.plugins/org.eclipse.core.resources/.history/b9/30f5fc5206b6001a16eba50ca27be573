@@ -1,0 +1,5 @@
+package com.object.model.vo;
+
+public class Nation {
+
+}

@@ -1,0 +1,25 @@
+package com.poly.controller;
+
+import com.poly.model.vo.Employee;
+import com.poly.model.vo.Person;
+import com.poly.model.vo.Singer;
+
+public class Functional {
+	
+//	//Employee내용을 출력하는 기능
+//	public void print(Employee e) {
+//		System.out.println(e.getName()+e.getAge()+e.getAddress());
+//	}
+//	//singer 내용을 출력하는 기능 //오버로딩. 객체가 바뀌어서 2개 따로 생성함
+//	public void print(Singer s) {
+//		System.out.println(s.getName()+s.getAge()+s.getAddress());
+//	}
+	
+	
+	//다형성을 이용하면 오버로딩을 줄일 수 있음
+	public void print(Person p) {
+		System.out.println(p.getName()+p.getAge()+p.getAddress());
+	}
+	
+	
+}

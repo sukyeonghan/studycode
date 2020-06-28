@@ -1,0 +1,72 @@
+package com.kh.hw.shape.view;
+
+import java.util.Scanner;
+
+import com.kh.hw.shape.controller.SquareController;
+import com.kh.hw.shape.controller.TriangleController;
+
+public class ShapeMenu {
+	
+	private static Scanner sc = new Scanner(System.in);
+	
+	SquareController scr = new SquareController();
+	TriangleController tc = new TriangleController();
+	
+	public ShapeMenu() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public void inputMenu() {
+		//삼각형과 사각형 선택
+		while(true) {
+		System.out.println("===== 도형 프로그램 =====");
+		System.out.println("3. 삼각형");
+		System.out.println("4. 사각형");
+		System.out.println("9. 프로그램 종료");
+		System.out.println("메뉴 번호 : ");
+		int number = sc.nextInt();
+		
+		if(number!=3||number!=4||number!=9) {
+			System.out.println("잘못된 번호입니다. 다시 입력하세요.");
+			} else if (number==3) {
+				ShapeMenu.triangleMenu();
+			} else if (number==4) {
+				ShapeMenu.squarMenu();
+			} else if(number==9) {
+				System.out.println("프로그램을 종료합니다.");
+				break;
+			}
+	
+		}
+		
+	}
+	
+	public static void triangleMenu() {
+		//삼각형 메뉴 출력
+		System.out.println("===== 삼각형 =====");
+		System.out.println("1. 삼각형 면적");
+		System.out.println("2. 삼각형 색칠");
+		System.out.println("3. 삼각형 정보");
+		System.out.println("9. 메인으로");
+		int number = sc.nextInt();
+		
+		if(number==1) {
+			System.out.println("메뉴 번호 : ");
+		}
+		
+		
+	}
+	
+	public static void squarMenu() {
+		//사각형 메뉴 출력
+	}
+	
+	public void inputSize(int type, int menuNum) {
+		//너비와 높이를 받아 요청 사항을 처리하거나 색깔을 받아 요청사항을 처리
+	}
+	
+	public void printInformation(int type) {
+		//매개변수에 따라 삼각형/사각형의 정보를 출력
+	}
+
+}

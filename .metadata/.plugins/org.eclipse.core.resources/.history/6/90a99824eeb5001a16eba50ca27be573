@@ -1,0 +1,11 @@
+package com.student.model.dao;
+
+import com.student.model.vo.Student;
+
+public class StudentDB {
+	//데이터를 저장하는 역할을 하는 객체
+	//입력된 데이터를 관리하는 역할을 함
+	
+	private Student s;
+
+}

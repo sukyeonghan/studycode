@@ -1,0 +1,17 @@
+package com.override.main;
+
+import com.override.model.vo.Cat;
+import com.override.model.vo.Chicken;
+import com.override.model.vo.Lion;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		Cat c = new Cat("두리","포유류",4);
+		Lion l = new Lion("흥이","포유류",4);
+		Chicken ch = new Chicken("처식이","조류",2);
+		
+	}
+
+}

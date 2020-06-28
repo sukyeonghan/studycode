@@ -15,7 +15,7 @@ public class RspGame {
 		
 		while(true) {
 			
-			System.out.println("1.가위 2.바위  3.보 (번호를 입력하세요)");
+			System.out.println("번호를 입력하세요. \n1.가위 2.바위  3.보 ");
 			int user = sc.nextInt();
 			
 			int com = (int)(Math.random()*3)+1;

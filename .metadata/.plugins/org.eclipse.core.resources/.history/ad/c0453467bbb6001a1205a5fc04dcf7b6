@@ -1,0 +1,90 @@
+package com.student.controller;
+
+import com.student.model.dao.StudentDB;
+import com.student.model.vo.Grade;
+import com.student.model.vo.Student;
+import com.student.view.Mainview;
+
+public class StudentManager {
+	
+	private StudentDB db = new StudentDB();
+
+	//저장값이 유지되기 위해 새로 하나 만듦. 같은 공간에 접근할 수 있게 heap에 만들어 쓴다
+	//한 번 생성되고 수정안하니까 동일값 유지
+	
+	
+	//서비스별 학생등록, 시작화면 출력, 데이터 저장
+	public void mainview() {
+		//시작화면으로 연결해주는 기능
+		new Mainview().mainMenu(this);
+	}
+
+	//학생 등록 서비스
+	public void enrollStudent() {
+		//Student객체를 만들어서 저장해놓음
+		//Student에 들어갈 각 정보를 입력 -> client가 입력 -> 화면을 보여줘야 함.(mainview담당)
+		
+		Student s =new Mainview().enrollStudent();
+		System.out.println(s.information());
+		//입력받은 데이터를 저장소에 저장
+		boolean result = db.saveStudent(s); //DB에 저장하기
+		System.out.println(result);
+		//알림 메세지 띄우기
+		new Mainview().printMsg(result?"입력성공":"입력실패");
+		//구분해놔야 유지보수 편리
+		
+	}
+	
+	
+	//이름으로 조회 서비스 구현
+	public void searchName() {
+		//이름으로 조회
+		String name = new Mainview().inputName();
+		Student s = db.searchName(name);
+		if(s==null) {
+			new Mainview().printMsg("조회결과가 없습니다.");
+		}else {
+			System.out.println("조회결과 : "+ s.information());
+		}
+		
+		//지금 ram에만 저장돼서 영원히 저장이 안됨. 파일로 저장하거나 db에 저장해야 함.
+	}
+	
+	//학생 전체 조희
+	public void searchAll() {
+		Student[] students=db.searchAll();
+		new Mainview().printStudents(students);
+	}
+	
+	//성적 등록 서비스
+	//성적 등록하는 기능
+	//학생 한 명을 선택하여 성적을 입력하는 서비스
+	public void inputGrade() { 
+		searchAll(); //전체 조회. 안 해도 되지만 선생님 생각. 이름이 중복될 수 있으니까 번호 부여해도 좋다
+		String name = new Mainview().inputName();
+		Student s = db.searchName(name);
+		if(s!=null) {
+			//성적 등록할 학생이 있음 -> 성적 등록 화면으로 이동
+			Grade g = new Mainview().inputGrade();
+			s.setGradePoint(g);
+		} else {
+			//성적 등록할 학생이 없음 -> 없다는 알림 출력
+			new Mainview().printMsg("등록된 학생이 아닙니다!");
+		}
+	}
+	
+	
+//	//학년으로 조회..배열에 넣어서 반환해야 함....
+//	public void searchGrade() {
+//		int grade = new Mainview().inputGrade();
+//		Student s = db.searchGrade(grade);
+//		if(s==null) {
+//			new Mainview().printMsg("조회결과가 없습니다.");
+//		} else {
+//			System.out.println("조회결과 : "+ s.information());
+//		}
+//	}
+	
+	
+	
+}

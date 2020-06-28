@@ -1,0 +1,43 @@
+package com.kh.model.vo;
+
+public class Driver extends Person {
+	
+	private int year;
+	private int crush;
+	
+	public Driver() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Driver(int year, int crush) {
+		super();
+		this.year = year;
+		this.crush = crush;
+	}
+	
+	
+
+	public Driver(String name, int age, char gender, int year, int crush) {
+		super(name, age, gender);
+		this.year = year;
+		this.crush = crush;
+	}
+
+	public int getYear() {
+		return year;
+	}
+
+	public void setYear(int year) {
+		this.year = year;
+	}
+
+	public int getCrush() {
+		return crush;
+	}
+
+	public void setCrush(int crush) {
+		this.crush = crush;
+	}
+	
+
+}

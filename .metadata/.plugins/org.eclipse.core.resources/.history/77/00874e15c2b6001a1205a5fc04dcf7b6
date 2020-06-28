@@ -1,0 +1,5 @@
+package com.inherit.model.vo;
+
+public class Teacher {
+//이름, 나이, 주소, 전화번호, 과목, 전공
+}

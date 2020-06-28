@@ -1,0 +1,17 @@
+package com.first.test;
+
+public class Test {
+	
+	private String name="안녕"; //명시적 초기값
+	
+	{ 
+		this.name="Rclass";
+	} //초기화블록
+	
+	public void className() {
+		this.name="몰라";
+	}	
+
+	
+	
+}

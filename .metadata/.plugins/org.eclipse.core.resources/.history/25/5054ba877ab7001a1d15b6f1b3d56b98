@@ -1,0 +1,23 @@
+package com.poly.main;
+
+import com.poly.model.vo.Animal;
+import com.poly.model.vo.Cat;
+import com.poly.model.vo.Duck;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		//다형성 활용하기
+		//부모 타입으로 설정되어 있는 변수에
+		//자식 타입의 객체가 대입 될 수 있는 것!
+		Cat tom = new Cat();
+		Duck donald = new Duck();
+		Animal ani = new Animal();
+		ani = new Cat(); //다형성 
+		ani = new Duck(); //다형성
+		ani = new Lion();
+		
+		
+	}
+
+}

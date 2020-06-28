@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.poly.controller.Funtional&apos; to &apos;Functional&apos;&#x0D;&#x0A;- Original project: &apos;09_poly&apos;&#x0D;&#x0A;- Original element: &apos;com.poly.controller.Funtional&apos;&#x0D;&#x0A;- Renamed element: &apos;com.poly.controller.Functional&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Funtional&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.poly.controller{Funtional.java[Funtional" matchStrategy="1" name="Functional" qualified="false" references="true" similarDeclarations="false" stamp="1593158497602" textual="false" version="1.0"/>
+</session>

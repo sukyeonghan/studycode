@@ -1,0 +1,80 @@
+package com.inherit.model.vo;
+
+public class Student {
+	//이름,나이,주소,전화번호,학년,반,번호
+	
+	private String name;
+	private int age;
+	private String address;
+	private String phone;
+	private int grade;
+	private int classroom;
+	private int number;
+	
+	//기본생성자 단축키 : ctrl+space+enter
+	
+	public Student() {
+	}
+	
+	//매개변수 생성자 단축기 : alt+s+a+g+
+	public Student(String name, int age, String address, String phone, int grade, int classroom, int number) {
+		super();
+		this.name = name;
+		this.age = age;
+		this.address = address;
+		this.phone = phone;
+		this.grade = grade;
+		this.classroom = classroom;
+		this.number = number;
+	}
+	
+	//setter/getter 만들기 : alt+s+r+a+r
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		if(name.length()>2) {
+		this.name = name;
+		}
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public int getGrade() {
+		return grade;
+	}
+	public void setGrade(int grade) {
+		this.grade = grade;
+	}
+	public int getClassroom() {
+		return classroom;
+	}
+	public void setClassroom(int classroom) {
+		this.classroom = classroom;
+	}
+	public int getNumber() {
+		return number;
+	}
+	public void setNumber(int number) {
+		this.number = number;
+	}
+	
+
+
+}

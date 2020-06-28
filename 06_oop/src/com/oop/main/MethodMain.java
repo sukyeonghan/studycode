@@ -9,6 +9,7 @@ import com.oop.model.vo.Student;
 public class MethodMain {
 	
 	public static void main(String[] args) {
+		
 		Functional fun = new Functional();
 		//반환형 없고, 매개변수 없는 매소드 호출
 		fun.calculator();
@@ -31,8 +32,8 @@ public class MethodMain {
 		
 		int result = fun.calculator3();
 		System.out.println(result*100);
-		//변수로 받고 활용
-		
+		//통상 반환형 있는 로직들은 변수로 받고 활용하는 경우가 많음
+		//여기선 입력된 값을 알 수 없음. 서로 독립된 공간임
 		
 		//반환형 있고 매개변수 있는 메소드 호출
 		result = fun.calculator4(20,20);
@@ -44,6 +45,8 @@ public class MethodMain {
 		//반환형 있고 매개변수 있는 메소드
 		String strResult = fun.str("안녕","하세요");
 		System.out.println(strResult);
+		//반환형 없고 매개변수 있는 메소드
+		fun.str1("그래", "안녕");
 	
 		//정수 두 개를 전달받아 첫 번째 수부터 두 번째 수까지 합을 리턴해주는 메소드
 		//단, 무조건 첫 번째 수가 커야함. 만약 작으면 "에러출력"
@@ -63,11 +66,12 @@ public class MethodMain {
 		
 		//값 직접 입력했을 때
 		System.out.println(fun.checkChar('1'));
+		//반환형 없고 매개변수 있는 메소드
+		fun.checkchar2('g');
 		
 		
-		
-		//객체, 배열 참조형 자료형 매개변수, 리턴으로 작성해보기
-		//객체, 배열같은 참조형,자료형은 가지고 있는 주소를 전달하기 때문에
+		//객체나 배열 참조형자료형 매개변수, 리턴으로 작성해보기
+		//객체나 배열같은 참조형자료형은 가지고 있는 주소를 전달하기 때문에
 		//배열의 얕은 복사와 같은 개념으로 사용되어 원본값이 수정되는 결과를 가져온다.
 		
 		int[] nums = {1,2,3,4}; //heap에 1,2,3,4 값을 가진 4칸 배열 생김
@@ -79,17 +83,18 @@ public class MethodMain {
 		System.out.println();//개행표시
 		
 		fun.updateArray(nums); //배열에 있는 값을 수정하는 로직
-		//같은 주소값가짐. heap을 참조해서 값을 바꿈
-		//for문 돌면 지워짐 - 메인은 남음
+		//(nums)를 쓰니까 주소값이 찍힘
+		//같은 주소값으로 서로 접근 가능.(얕은복사) heap을 참조해서 값을 바꿈
+		//for문 돌면 updateArray 지워짐 - 메인은 남음
 		System.out.println("=== 수정 후 ===");
 		for(int a :nums) {
 			System.out.print(a+" ");
-		} //변경된 heap 참조해서 출력. 주소값을 가지고 이런 결과가!
+		} //변경된 heap 참조해서 출력. 
 		System.out.println();//개행표시
 		
 		
 		System.out.println("수정 전 : "+su);
-		//fun.basicUpdate(su);
+		//fun.basicUpdate(su); int su를 수정하는 로직
 		su=fun.basicUpdate();
 		System.out.println("수정 후 : "+su);
 		

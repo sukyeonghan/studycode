@@ -1,0 +1,16 @@
+package com.inherit.main;
+
+public class InheritUse {
+	
+	public static void main(String[] args) {
+		
+		Teacher t = new Teacher();
+		t.getName();
+		t.getAge();
+		
+		
+		
+		
+	}
+
+}

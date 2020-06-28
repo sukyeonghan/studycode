@@ -34,14 +34,5 @@ public class ConstructorMain {
 				m3.getMemberPw()+" " + m3.getName()+" "+m3.getPhone()+ 
 				" "+m3.getPersonNo());
 		
-		
-		CommunityMember com1 = new CommunityMember("한수경","tnrud","1234");
-		CommunityMember com2 = new CommunityMember("김세민","tpals","2345");
-		CommunityMember com3 = new CommunityMember("이지훈","wlgns","3456");
-		
-		CommunityBoard board1 = new CommunityBoard("출첵","안녕하세요","열공하세요");
-		CommunityBoard board2 = new CommunityBoard("체크","하이","오늘은 쉽니다");
-		CommunityBoard board3 = new CommunityBoard("체키라웃","안녕","복습해라");
-		
 	}
 }

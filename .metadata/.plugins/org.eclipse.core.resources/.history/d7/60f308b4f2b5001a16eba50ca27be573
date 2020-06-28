@@ -1,0 +1,38 @@
+package com.student.controller;
+
+import com.student.model.dao.StudentDB;
+import com.student.model.vo.Student;
+import com.student.view.Mainview;
+
+public class StudentManager {
+	//서비스별 학생등록, 시작화면 출력, 데이터 저장
+	public void MainView() {
+		//시작화면으로 연결해주는 기능
+		new Mainview().mainMenu();
+	}
+
+	//학생 등록 서비스
+	public void enrollStudent() {
+		//Student객체를 만들어서 저장해놓음
+		//각 정보를 입력 -> client가 입력 -> 화면을 보여줘야 함.
+		
+		Student s =new Mainview().enrollStudent();
+		System.out.println(s.information());
+		//입력받은 데이터를 저장소에 저장
+		boolean result = new StudentDB().saveStudent(s); //DB에 저장하기
+		System.out.println(result);
+		
+		new Mainview().printMsg(result?"입력성공":"입력실패");
+		
+	}
+	
+	
+	//이름으로 조회 서비스 구현
+	public void searchName() {
+		//이름으로 조회
+		String name=new Mainview().inputname();
+		
+		
+	}
+	
+}

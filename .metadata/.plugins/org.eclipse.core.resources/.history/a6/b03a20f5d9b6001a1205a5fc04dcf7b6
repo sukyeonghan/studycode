@@ -1,0 +1,12 @@
+package com.inherit.main;
+
+public class OverrideTest {
+
+	public static void main(String[] args) {
+		
+		Dog d = new Dog("개과","까우",'M',"잡식");
+		
+		
+	}
+	
+}

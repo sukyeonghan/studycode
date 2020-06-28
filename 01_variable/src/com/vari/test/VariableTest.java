@@ -5,7 +5,7 @@ public class VariableTest {
 	public static void main(String[] args) {
 		//기본 변수 선언하기
 		//변수 선언 = 자료형 변수형;
-		//진위값(true,flase) 저장하는 변수 선언
+		//진위값(true,false) 저장하는 변수 선언
 		boolean isTrue; //진위값을 저장하는 한 개의 저장공간확보
 		
 		//정수 저장하는 변수 선언하기

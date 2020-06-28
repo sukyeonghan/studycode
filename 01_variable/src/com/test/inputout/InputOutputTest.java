@@ -41,9 +41,9 @@ public class InputOutputTest {
 		// /n : 줄바꾸기, \t : 정해진 공간만큼 띄우기
 		System.out.print("안녕하세요 저는 \n");
 		System.out.print("\t 한수경입니다.");
-		//""표현하고 싶을 때
+		//""표현하고 싶을 때 : \"
 		System.out.println("내가 말했다. \"우왓!\"");
-		// /표현할 때
+		// /표현할 때 : \\
 		System.out.println("c:\\user01\\");
 		//문자열에도 가능
 		String msg="안녕\t 하세요\n 하하";

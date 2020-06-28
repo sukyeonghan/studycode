@@ -80,16 +80,24 @@ public class Functional {
 		return su+su2;
 	}
 	
+	
+	
+	
+	
 	//문자열 두 개를 전달받고 두 문자열을 결합하고 리턴해주는 메소드 만들기
 	//반환형 있고 매개변수 있는 메소드
 	public String str(String str1, String str2) {
 		return str1+str2;
-		
 	}
+	//반환형 없고 매개변수 있다면?
+	public void str1(String strr1,String strr2) {
+		System.out.print(strr1+strr2);
+	}
+	
 	
 	//정수 두 개를 전달받아 첫 번째 수부터 두 번째 수까지 합을 리턴해주는 메소드
 	//단, 무조건 첫 번째 수가 커야함. 만약 작으면 에러 출력
-
+	//선생님 풀이. 반환형 있고 매개변수 있는 메소드
 	public int print(int first, int second) {
 		int result=0;
 		if(first<second) {
@@ -101,7 +109,6 @@ public class Functional {
 		}
 		return result;
 	}
-	
 	//내가 한 거. 반환형 없고 매개변수 있는 메소드
 	public void su(int su1, int su2) {
 		if(su1>su2) {
@@ -114,17 +121,28 @@ public class Functional {
 	//문자 한 개를 전달받아 영문자인지 확인 후 결과를 리턴해주는 메소드 
 	//true/false
 	//변환형 있고 매개변수 있는 메소드
-	
 	public boolean checkChar(char check) {
 		return ('a'<=check&&check<='z')||
 								('A'<=check&&check<='Z');
-		
 	}
+	//반환형 없고 매개변수 있는 메소드
+	public void checkchar2(char check2) {
+		if(('a'<=check2&&check2<='z')||
+		('A'<=check2&&check2<='Z')) {
+			System.out.println(true);
+		} else {
+			System.out.println(false);
+		}
+	}
+	
+	
+	
 	
 	//배열을 매개변수로 받는 메소드 생성
 	public void updateArray(int[] nums) {
 		//배열을 입력받는 값으로 초기화하기
 		Scanner sc = new Scanner(System.in);
+		
 		System.out.println("=== 배열 수정하기 ===");
 		
 		for(int i=0; i<nums.length; i++) { //4회전
@@ -134,7 +152,7 @@ public class Functional {
 	}
 	
 	//기본 자료형을 매개변수로 받고 수정하기 -> 안 됨!
-	//아까는 같은 주소값이어서 원본값도 수정되지만 이건 아님.
+	//배열은 같은 주소값이어서 원본값도 수정되지만 기본 자료형 아님.
 //	public void basicUpdate(int su) {
 //		su=200;
 //	}

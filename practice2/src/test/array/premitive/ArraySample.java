@@ -135,11 +135,15 @@ public class ArraySample {
 		int gender = Integer.parseInt(personID.substring(7,8));
 		
 		Calendar cal = Calendar.getInstance();
-		cal.set(myYear,myMonth,myDate);
-		int whatDate = cal.get(Calendar.DAY_OF_WEEK);
+		int year = cal.get(Calendar.YEAR);
+		
+		System.out.println(myYear+""+ myMonth+ ""+myDate);
+		cal.set(myYear, myMonth, myDate);
+		
+		int whatDay = cal.get(Calendar.DAY_OF_WEEK);
 		
 		String day = "";
-		switch(whatDate) {
+		switch(whatDay) {
 		case 1 : day="일"; break;
 		case 2 : day="월"; break;
 		case 3 : day="화"; break;
@@ -147,16 +151,18 @@ public class ArraySample {
 		case 5 : day="목"; break;
 		case 6 : day="금"; break;
 		case 7 : day="토"; 
+		
 		}
+	
 		System.out.print(day+"요일");
 		
-		if(gender==0) {
+		if(gender==1) {
 			System.out.println("\n남자");
 		} else {
 			System.out.println("\n여자");
 		}
-		cal.set(Calendar.YEAR,2020);
-		int age =cal.get(Calendar.YEAR)-myYear;
+		
+		int age = year-myYear;
 		System.out.println(age+1);
 	}
 
