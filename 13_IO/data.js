@@ -1,0 +1,1 @@
+funtion test(){alert('гоюл');}

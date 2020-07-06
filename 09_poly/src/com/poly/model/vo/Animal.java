@@ -51,5 +51,8 @@ public class Animal {
 		this.gender = gender;
 	}
 	
-
+	@Override
+	public String toString() {
+		return "Animal²¨";
+	}
 }

@@ -51,5 +51,33 @@ public class Employee extends Person{
 		this.salary = salary;
 	}
 	
+	@Override
+	public String getName( ) {
+		return "내가 누구게?";
+	}
+	
+	@Override //부모 있는지 확인
+	public String toString() { //Object에 있는 toString메소드를 재정의한 것 
+		//return "Employee 부서"+department+"직책"+job+"월급"+salary;
+		return getName()+getAge()+getAddress()+department+job+salary;
+	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof Employee) {
+			Employee e = (Employee)obj;
+			if(super.getName().equals(e.getName())//부모 것도 불러서 할 수 있음
+					&&this.salary==e.salary) { //get안써도 쓸 수 있게 해줌
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	@Override
+	public Employee clone() {//깊은 복사
+		return new Employee(getName(),getAge(),getAddress(),
+				department, job,salary);
+		
+	}
 }

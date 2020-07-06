@@ -12,21 +12,21 @@ public class Singer extends Person{
 	
 	
 
-	public Singer(String name, int age, String address, String title, int year, String genre) {
-		super(name, age, address);
-		this.title = title;
-		this.year = year;
-		this.genre = genre;
-	}
-
-
-
 	public Singer(String title, int year, String genre) {
 		super();
 		this.title = title;
 		this.year = year;
 		this.genre = genre;
 	}
+
+	public Singer(String name, int age, String address, String title, int year, String genre) {
+	super(name, age, address);
+	this.title = title;
+	this.year = year;
+	this.genre = genre;
+}
+
+
 
 	public String getTitle() {
 		return title;
@@ -52,7 +52,10 @@ public class Singer extends Person{
 		this.genre = genre;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return getName()+getAge()+getAddress()+title+year+genre;
+	}
 	
 
 }
